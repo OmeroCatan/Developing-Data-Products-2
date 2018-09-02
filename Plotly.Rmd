@@ -1,0 +1,23 @@
+---
+title: "Developing Data Products Week 3 Plotly"
+author: "Omero Catan"
+date: "September 2, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## JohnsonJohnson Data Set
+
+The data collected is a default "R" dataset which provides the quarterly earnings per Johnson & Johnson share from 1960 - 1980.
+```{r, echo=FALSE, include=FALSE, message=FALSE}
+library(plotly)
+```
+
+## Johnson & Johnson Quartely Earnings
+```{r, echo=FALSE, message=FALSE}
+data("JohnsonJohnson")
+plot_ly(x=time(JohnsonJohnson), y = JohnsonJohnson)
+```
